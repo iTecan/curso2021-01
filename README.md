@@ -28,5 +28,5 @@ Revisar también si el nombre y apellidos son correctos.
 | Christian | Santamaría Cameselle | christian_ | ChristianSantamaría | SI | SI |
 | Jorge | Ordóñez Vázquez | jorge.ordonez | jorgeorvaz | SI | SI |
 | Gregorio | Cobacho Navarro | gcobacho | gcobacho | SI | SI |
-| Félix | Rojo Trueba |redmancete | redmancete | SI | SI |
+| Félix | Rojo Trueba | iTecan | iTecan | SI | SI |
 | Xavier | Sbert Colom | Xavi Sbert | XaviSbert | SI | SI |
