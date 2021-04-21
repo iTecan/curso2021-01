@@ -28,7 +28,7 @@ msgstr ""
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__assigned
 msgid "Assigned"
-msgstr ""
+msgstr "Asignado"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields.selection,name:helpdesk_felixrojo.selection__helpdesk_ticket__state__cancelado
@@ -39,53 +39,53 @@ msgstr ""
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__action_corrective
 #: model_terms:ir.ui.view,arch_db:helpdesk_felixrojo.view_helpdesk_ticket_form
 msgid "Corrective Action"
-msgstr ""
+msgstr "Accion correctiva"
 
 #. module: helpdesk_felixrojo
 #: model_terms:ir.actions.act_window,help:helpdesk_felixrojo.helpdesk_ticket_action
 msgid "Create a new ticket"
-msgstr ""
+msgstr "Crear un nuevo ticket"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado en"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__date
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__date_limit
 msgid "Date Limit"
-msgstr ""
+msgstr "Fecha limite"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,help:helpdesk_felixrojo.field_helpdesk_ticket__action_corrective
 msgid "Describe corrective actions to do"
-msgstr ""
+msgstr "Describe acciones correctivas a hacer"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,help:helpdesk_felixrojo.field_helpdesk_ticket__action_preventive
 msgid "Describe preventive actions to do"
-msgstr ""
+msgstr "Describe acciones preventivas a hacer"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__description
 #: model_terms:ir.ui.view,arch_db:helpdesk_felixrojo.view_helpdesk_ticket_form
 msgid "Description"
-msgstr ""
+msgstr "Descripcion"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre de muestra"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields.selection,name:helpdesk_felixrojo.selection__helpdesk_ticket__state__proceso
@@ -117,17 +117,17 @@ msgstr ""
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modificacion"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultima actualizacion por"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultima actualizacion el"
 
 #. module: helpdesk_felixrojo
 #: model:res.groups,name:helpdesk_felixrojo.helpdesk_manager
@@ -137,7 +137,7 @@ msgstr ""
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__name
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields.selection,name:helpdesk_felixrojo.selection__helpdesk_ticket__state__nuevo
@@ -153,12 +153,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__action_preventive
 #: model_terms:ir.ui.view,arch_db:helpdesk_felixrojo.view_helpdesk_ticket_form
 msgid "Preventive Action"
-msgstr ""
+msgstr "Accion preventiva"
 
 #. module: helpdesk_felixrojo
 #: model_terms:ir.ui.view,arch_db:helpdesk_felixrojo.view_helpdesk_ticket_form
 msgid "Quality"
-msgstr ""
+msgstr "Calidad"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields.selection,name:helpdesk_felixrojo.selection__helpdesk_ticket__state__resuelto
@@ -168,7 +168,7 @@ msgstr ""
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__state
 msgid "State"
-msgstr ""
+msgstr "Estado"
 
 #. module: helpdesk_felixrojo
 #: model:ir.model,name:helpdesk_felixrojo.model_helpdesk_ticket
@@ -186,9 +186,9 @@ msgstr ""
 #. module: helpdesk_felixrojo
 #: model:ir.model.fields,field_description:helpdesk_felixrojo.field_helpdesk_ticket__time
 msgid "Time"
-msgstr ""
+msgstr "Tiempo"
 
 #. module: helpdesk_felixrojo
 #: model:res.groups,name:helpdesk_felixrojo.helpdesk_user
 msgid "User"
-msgstr ""
+msgstr "Usuario"
