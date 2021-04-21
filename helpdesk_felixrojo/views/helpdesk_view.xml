@@ -18,6 +18,12 @@
         <field name="arch" type="xml">
             <form string="Ticket">
                 <header>
+                <!--Asignar, solo visible con estado nuevo -->
+                <button string="Asignar" name="asignar" type="object" states="nuevo"/>
+                <!--Proceso, solo visible con estado asignado -->
+                <button string="En proceso" name="proceso" type="object" states="asignado"/>
+                <!--Finalizar, visible con todos los estados -->
+                <button string="Finalizar" name="resuelto" type="object" states="nuevo,asignado,proceso,pendiente"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>

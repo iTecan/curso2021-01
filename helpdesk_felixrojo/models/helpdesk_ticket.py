@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, api, fields, _
 
 class HelpdeskTicket(models.Model):
     _name = 'helpdesk.ticket'
@@ -8,7 +8,8 @@ class HelpdeskTicket(models.Model):
         string='Name',
         required=True)
     description = fields.Text(
-        string='Description')
+        string='Description',
+        translate= True)
     date = fields.Date(
         string='Date')
 
@@ -47,3 +48,25 @@ class HelpdeskTicket(models.Model):
         help='Describe preventive actions to do')
     
     
+    #Cambiar estado a asignado, visible solo con estado=nuevo
+    def asignar(self):
+        self.ensure_one()
+        self.write({
+            'state': 'asignado',
+            'assigned': True})
+    
+    def proceso(self):
+        self.ensure_one()
+        self.state = 'proceso'
+
+    def pendiente(self):
+        self.ensure_one()
+        self.state = 'pendiente'
+
+    def resuelto(self):
+        self.ensure_one()
+        self.state = 'resuelto'
+
+    def cancelado(self):
+        self.ensure_one()
+        self.state = 'cancelado'
