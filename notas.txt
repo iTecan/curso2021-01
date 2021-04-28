@@ -1,3 +1,0 @@
-ahora usar BBDD curso3
-user: admin
-pass: admin
