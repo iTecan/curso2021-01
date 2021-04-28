@@ -1,4 +1,7 @@
 from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
+from datetime import datetime
+from datetime import timedelta
 
 class HelpdeskTicketAction(models.Model):
     _name = 'helpdesk.ticket.action'
@@ -23,9 +26,17 @@ class HelpdeskTicketTag(models.Model):
         column2='ticket_id',
         string='Tags')
 
+    @api.model
+    def cron_delete_tag(self):
+        tickets = self.search([('ticket_ids', '=', False)])
+        tickets.unlink()
+
 class HelpdeskTicket(models.Model):
     _name = 'helpdesk.ticket'
     _description = 'Ticket'
+
+    def date_default_today(self):
+        return fields.Date.today()
 
     tag_ids = fields.Many2many(
         comodel_name='helpdesk.ticket.tag',
@@ -45,8 +56,11 @@ class HelpdeskTicket(models.Model):
     description = fields.Text(
         string='Description',
         translate= True)
+
     date = fields.Date(
-        string='Date')
+        string='Date',
+        default= date_default_today
+        )
 
     #Estado, por defecto nuevo
     state = fields.Selection(
@@ -131,9 +145,9 @@ class HelpdeskTicket(models.Model):
     def create_tag(self):
         self.ensure_one()
         #opcion 1
-        self.write({
-            'tag_ids': [(0,0, {'name': self.tag_name})]
-        })
+        #self.write({
+        #    'tag_ids': [(0,0, {'name': self.tag_name})]
+        #})
         #opcion 2
         #tag = self.env['helpdesk.ticket.tag'].create({
         #    'name': self.tag_name
@@ -151,4 +165,25 @@ class HelpdeskTicket(models.Model):
         #    'name': self.tag_name,
         #    'ticket_ids': [(6, 0, self.ids)]
         #])
+        #self.tag_name = False
+
+        action = self.env.ref('helpdesk_felixrojo.action_new_tag').read()[0]
+        action['context'] = {
+            'default_name': self.tag_name,
+            'default_ticket_ids': [(6, 0, self.ids)]
+        }
+        #action['res_id'] = tag.id
         self.tag_name = False
+        return action
+
+
+    @api.constrains('time')
+    def _time_positive(self):
+        for ticket in self:
+            if ticket.time < 0:
+                raise ValidationError (_("The time can not be negative."))
+
+    @api.onchange('date', 'time')
+    def _onchage_date(self):
+        self.date_limit = self.date and self.date + timedelta(hours=self.time)
+            
